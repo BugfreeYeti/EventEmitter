@@ -1,12 +1,40 @@
 {
   "name": "yang-eventemitter",
-  "version": "1.0.2",
-  "description": "This is an event emitter for user JavaScript",
-  "main": "index.js",
-  "author": "yang",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "1.0.5",
+  "description": "A lightweight event emitter in TypeScript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
-  "keywords": ["EventEmitter","Event","JavaScript","vue"],
-  "license": "ISC"
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsup src/index.ts --watch",
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "yang",
+  "license": "MIT",
+  "keywords": [
+    "EventEmitter",
+    "event-emitter",
+    "typescript",
+    "events",
+    "pub-sub"
+  ],
+  "devDependencies": {
+    "tsup": "^7.2.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "yang-eventemitter": "^1.0.5"
+  }
 }

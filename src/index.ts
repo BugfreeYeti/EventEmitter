@@ -26,13 +26,3 @@ class EventEmitter {
 
 export default EventEmitter;
 
-// // 使用例子
-// const emitter = new EventEmitter();
-
-// // 注册
-// emitter.on('login', () => {
-//   console.log('Login successful!');
-// });
-
-// // Emit event
-// emitter.emit('login');
