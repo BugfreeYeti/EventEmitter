@@ -21,7 +21,14 @@
     "clean": "rm -rf dist",
     "prepublishOnly": "npm run build"
   },
-  "author": "yang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BugfreeYeti/EventEmitter"
+  },
+  "bugs": {
+    "url": "https://github.com/BugfreeYeti/EventEmitter/issues"
+  },
+  "author": "BugfreeYeti <https://github.com/BugfreeYeti>",
   "license": "MIT",
   "keywords": [
     "EventEmitter",
